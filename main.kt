@@ -2,7 +2,6 @@ import java.time.LocalDate
 import java.time.format.DateTimeFormatter
 import java.util.*
 import kotlin.random.Random
-import ZodiacCalculator
 
 val predictions = listOf(
     "Это ваш день! Удача на вашей стороне.",

@@ -5,11 +5,9 @@ import java.util.*
 fun main() {
     val scanner = Scanner(System.`in`)
 
-    // Ввод имени пользователя
     print("Введите ваше имя: ")
     val name = scanner.nextLine()
 
-    // Ввод даты рождения или знака зодиака
     println("Выберите вариант:")
     println("1. Ввести знак зодиака")
     println("2. Ввести дату рождения")
@@ -20,7 +18,6 @@ fun main() {
     var zodiacChoice: Number = 0
 
     if (choice == "1") {
-        // Ввод знака зодиака
         println("Выберите ваш знак зодиака: ")
         println("1. Овен")
         println("2. Телец")
@@ -43,7 +40,7 @@ fun main() {
         val formatter = DateTimeFormatter.ofPattern("dd.MM.yyyy")
         birthDate = LocalDate.parse(birthDateString, formatter)
         
-        val dayOfYear = birthDate.dayOfYear  // Получаем день в году
+        val dayOfYear = birthDate.dayOfYear  
 
         zodiacChoice = when (dayOfYear) {
             in LocalDate.of(2000, 3, 21).dayOfYear..LocalDate.of(2000, 4, 19).dayOfYear -> 1
@@ -99,7 +96,6 @@ fun main() {
         else -> LocalDate.now()
     }
 
-    // Вывод информации
     println("\nИмя: $name")
     if (zodiacSign != null) {
         println("Знак зодиака: $zodiacSign")
